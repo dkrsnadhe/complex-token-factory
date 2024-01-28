@@ -1,66 +1,31 @@
-## Foundry
+# Complex Token Factory Smart Contract
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## Overview
 
-Foundry consists of:
+The Complex Token Factory Smart Contract is a decentralized solution for creating sophisticated tokens with customizable features. It consists of two primary contracts: Token Factory and Token. This system provides users with the flexibility to choose between basic and advanced token configurations, allowing for tailored token deployments.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Contracts
 
-## Documentation
+### 1. Token Factory
 
-https://book.getfoundry.sh/
+The Token Factory contract acts as the central hub for creating both basic and advanced tokens. Users can interact with the Token Factory to deploy new tokens with specific features and complexities.
 
-## Usage
+#### Functions:
 
-### Build
+- `createToken`: Function to create new token
+- `transferToken`: Function to transfer token
+- `getBalance`: Function to view the token balance owned by a specific address
+- `getTokenData`: Function to view token data
 
-```shell
-$ forge build
-```
+### 2. Token
 
-### Test
+The Token contract represents the individual tokens created by the Token Factory.
 
-```shell
-$ forge test
-```
+### Functions:
 
-### Format
+- `transfer`: Function to transfer token
 
-```shell
-$ forge fmt
-```
+## Contract Address
 
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+- Token contract = 0x149dBBD9563275CfA5c3aE8aA8F273261b62Ab22
+- Token factory contract = 0x060813A7037c31f208F7FD521C2705a2EC6D12E9
